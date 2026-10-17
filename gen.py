@@ -127,6 +127,13 @@ ev(30,"03:30","14:00","chartright","Chartright shift","Rest day")
 ev(30,"14:00","15:00","commute","Commute home")
 ev(30,"15:30","21:00","guelph","Open for Guelph")
 ev(30,"22:00","24:00","sleep","Sleep")
+# ---- Recurring: Weekly board meeting, every Sunday 18:00-18:30 from 2026-10-18, through the planned range ----
+_ds=sorted({x["date"] for x in E}); _d=max(datetime.date(2026,10,18),datetime.date.fromisoformat(_ds[0])); _end=datetime.date.fromisoformat(_ds[-1])
+_d+=datetime.timedelta((6-_d.weekday())%7)
+while _d<=_end:
+    _iso=_d.isoformat(); _g=any(x["date"]==_iso and x["type"]=="guelph" and x["start"]<"18:30" and x["end"]>"18:00" for x in E)
+    E.append({"date":_iso,"start":"18:00","end":"18:30","type":"event","label":"Weekly board meeting with the crew","notes":"Recurring weekly (Sun)"+(" - overlaps Guelph open slot" if _g else ""),"recurrence":"FREQ=WEEKLY;BYDAY=SU"})
+    _d+=datetime.timedelta(7)
 for i,x in enumerate(E):x["id"]=f"e{i+1}"
 json.dump({"timezone":"America/Toronto","updated":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),"events":E},open("data/schedule.json","w"),indent=1,ensure_ascii=False)
 print(len(E),"events")
