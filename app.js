@@ -9,9 +9,9 @@ function nOv(){return Object.keys(ov.edits).length+ov.deleted.length+ov.added.le
 function weekStart(d){const x=new Date(d);x.setDate(x.getDate()-x.getDay());x.setHours(0,0,0,0);return x} // Sunday-start... use Sat:
 function wStart(d){const x=new Date(d);x.setHours(0,0,0,0);x.setDate(x.getDate()-((x.getDay()+1)%7));return x}
 function setView(v){view=v;render()}function nav(k){cur.setDate(cur.getDate()+(view=="week"?7:1)*k);render()}function goToday(){cur=new Date();render()}
-function fmt(t){const m=mins(t);if(m>=1440)return"12:00 AM";const h=Math.floor(m/60),mm=m%60;return((h%12)||12)+":"+pad(mm)+" "+(h<12?"AM":"PM")}
-function m12(m){m%=1440;const h=Math.floor(m/60);return[((h%12)||12)+":"+pad(m%60),h<12?"AM":"PM"]}
-function rng(s,e){const[a,pa]=m12(mins(s)),[b,pb]=m12(mins(e));return pa==pb&&mins(s)<mins(e)?`${a}–${b} ${pb}`:`${a} ${pa}–${b} ${pb}`}
+function fmt(t){const m=mins(t)%1440;return pad(Math.floor(m/60))+":"+pad(m%60)}
+function m12(m){m%=1440;return[pad(Math.floor(m/60))+":"+pad(m%60),""]}
+function rng(s,e){return fmt(s)+"–"+fmt(e)}
 function trueRng(ev,E){let s=ev.start,e=ev.end;const d=parse(ev.date);if(s=="00:00"){const p=new Date(d);p.setDate(p.getDate()-1);const x=E.find(x=>x.date==iso(p)&&x.type==ev.type&&x.end=="24:00");if(x)s=x.start}
 if(e=="24:00"){const n=new Date(d);n.setDate(n.getDate()+1);const x=E.find(x=>x.date==iso(n)&&x.type==ev.type&&x.start=="00:00");if(x)e=x.end}return rng(s,e)}
 function render(){vw.className=view=="week"?"on":"";vd.className=view=="day"?"on":"";const n=nOv();banner.style.display=n?"flex":"none";bantxt.textContent=`✎ ${n} local change${n>1?"s":""} (saved on this device only)`;
@@ -39,5 +39,5 @@ function delEv(){const a=ov.added.findIndex(x=>x.id==editing);if(a>=0)ov.added.s
 function resetAll(){if(confirm("Discard all local changes and reload from the published schedule?")){ov={edits:{},deleted:[],added:[]};save()}}
 function exportJSON(){const out={...base,updated:new Date().toISOString(),events:events().map(({_o,...e})=>e)};const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:"application/json"}));a.download="schedule.json";a.click()}
 legend.innerHTML=TYPES.map(t=>`<span style="--c:var(--${t})">${NAMES[t]}</span>`).join("");
-fetch("data/schedule.json?"+Date.now()).then(r=>r.json()).then(d=>{base=d;upd.textContent="Updated "+new Date(d.updated).toLocaleString(undefined,{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+fetch("data/schedule.json?"+Date.now()).then(r=>r.json()).then(d=>{base=d;upd.textContent="Updated "+new Date(d.updated).toLocaleString(undefined,{weekday:"short",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit",hourCycle:"h23"});
 const t=iso(new Date());if(d.events.length&&!d.events.some(e=>e.date==t)){const f=d.events.map(e=>e.date).filter(x=>x>t).sort()[0]||d.events[0].date;cur=parse(f)}render();setInterval(render,60000)}).catch(e=>upd.textContent="Couldn't load schedule");
