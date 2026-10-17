@@ -17,7 +17,7 @@ ev(17,"04:20","05:00","commute","Prep + commute")
 ev(17,"05:00","15:30","chartright","Chartright shift")
 ev(17,"10:30","11:00","meal","Lunch at work")
 ev(17,"15:30","16:00","meal","Drive to gym + packed dinner","30-min drive; eat packed dinner on the way")
-ev(17,"16:00","18:00","workout","Chest & Shoulders","2h. Option: cut to 1h (16:00-17:00) to be in bed by 18:00 (7.75h)","Chest & Shoulders")
+ev(17,"16:00","18:00","workout","Chest & Shoulders","2h, straight from work","Chest & Shoulders")
 ev(17,"18:00","19:00","commute","Drive home")
 ev(17,"19:00","24:00","sleep","Sleep","Only 6.75h (19:00-01:45) - nap after Sun EA shift")
 # Sun 18

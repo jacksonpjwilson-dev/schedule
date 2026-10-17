@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-17T03:06:23+00:00",
+ "updated": "2026-10-17T03:12:30+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -26,7 +26,7 @@
    "end": "18:00",
    "type": "workout",
    "label": "Chest & Shoulders",
-   "notes": "2h. Option: cut to 1h (16:00-17:00) to be in bed by 18:00 (7.75h)",
+   "notes": "2h, straight from work",
    "split": "Chest & Shoulders",
    "id": "e3"
   },
