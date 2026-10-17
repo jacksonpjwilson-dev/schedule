@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#0c121b"/><meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>Schedule</title>
+<style>
+:root{--bg:#0c121b;--card:#171e2a;--card2:#1c2433;--line:rgba(255,255,255,.06);--text:#e8eef6;--muted:#8b97a8;--gold:#d4b06a;
+--chartright:#e5484d;--ea:#e93d82;--sleep:#5b5bd6;--workout:#30a46c;--meal:#f5a524;--commute:#6d8299;--guelph:#12a594;--event:#d4b06a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;background:var(--bg);color:var(--text);letter-spacing:.01em}
+header{padding:calc(env(safe-area-inset-top) + 16px) 18px 8px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;gap:12px;align-items:center}.logo{width:28px;height:28px;border-radius:8px;background:var(--card);display:grid;place-items:center;color:var(--gold);font-weight:700;font-size:12px}
+h1{font-size:15px;margin:0;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#c5cdd8}small{color:var(--muted);font-size:11px}
+button{font:inherit;border:0;border-radius:12px;background:var(--card);color:var(--text);padding:8px 12px;cursor:pointer}
+.gold{background:var(--gold);color:#1a1408;font-weight:600}
+.bar{display:flex;gap:8px;align-items:center;padding:6px 18px;flex-wrap:wrap}
+.seg{display:flex;background:var(--card);border-radius:12px;padding:3px}.seg button{background:none;color:var(--muted);padding:6px 14px}.seg button.on{background:var(--card2);color:var(--text)}
+#title{flex:1;text-align:center;font-weight:600}
+#banner{display:none;margin:6px 18px;padding:10px 12px;border-radius:12px;background:rgba(212,176,106,.12);color:var(--gold);font-size:13px;align-items:center;gap:8px}
+main{padding:6px 12px 110px}
+.week{display:grid;grid-template-columns:38px repeat(7,minmax(70px,1fr));overflow-x:auto;background:var(--card);border-radius:16px;padding:8px 6px}
+.dh{text-align:center;font-size:12px;color:var(--muted);padding:4px 0 8px;cursor:pointer}.dh b{display:block;color:var(--text);font-size:15px}.dh.today b{color:var(--gold)}
+.col{position:relative;border-left:1px solid var(--line);height:960px}.hrs{position:relative;height:960px}
+.hrs div{position:absolute;right:4px;font-size:10px;color:var(--muted);transform:translateY(-50%)}
+.hl{position:absolute;left:0;right:0;border-top:1px solid var(--line)}
+.ev{position:absolute;border-radius:6px;padding:2px 4px;font-size:10px;line-height:1.15;overflow:hidden;color:#fff;cursor:pointer;border:1px solid rgba(0,0,0,.25)}
+.ev.over{outline:2px dashed var(--gold);outline-offset:-2px}
+.now{position:absolute;left:0;right:0;border-top:2px solid var(--gold);z-index:5}
+.agenda .it{display:flex;gap:12px;background:var(--card);border-radius:14px;padding:12px;margin:8px 0;cursor:pointer;align-items:center}
+.dot{width:6px;align-self:stretch;border-radius:3px}.t{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;min-width:92px}
+.it .l{font-weight:600}.it .n{color:var(--muted);font-size:12px;margin-top:2px}
+.legend{display:flex;flex-wrap:wrap;gap:10px;padding:10px 18px;font-size:11px;color:var(--muted)}.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:4px;background:var(--c)}
+.fab{position:fixed;right:20px;bottom:calc(env(safe-area-inset-bottom) + 20px);width:56px;height:56px;border-radius:28px;font-size:28px;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+dialog{background:var(--card);color:var(--text);border:0;border-radius:18px;width:min(420px,92vw);padding:18px}dialog::backdrop{background:rgba(0,0,0,.6)}
+label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}input,select,textarea{width:100%;font:inherit;background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px}
+.row{display:flex;gap:8px}.row>*{flex:1}.acts{display:flex;gap:8px;margin-top:16px;justify-content:flex-end}.del{background:#3a1d24;color:#ef7a8a;margin-right:auto}
+</style></head><body>
+<header><div class="brand"><div class="logo">SC</div><div><h1>Schedule</h1><small id="upd">Loading…</small></div></div>
+<div class="row" style="flex:0"><button onclick="exportJSON()" title="Export JSON">⤓</button></div></header>
+<div id="banner"><span id="bantxt"></span><span style="flex:1"></span><button onclick="resetAll()">Reset</button></div>
+<div class="bar"><div class="seg"><button id="vw" class="on" onclick="setView('week')">Week</button><button id="vd" onclick="setView('day')">Day</button></div>
+<button onclick="nav(-1)">‹</button><div id="title"></div><button onclick="nav(1)">›</button><button onclick="goToday()">Today</button></div>
+<div class="legend" id="legend"></div><main id="main"></main>
+<button class="fab gold" onclick="openEd()">+</button>
+<dialog id="dlg"><form method="dialog" id="f"><h3 id="dt" style="margin:0">Event</h3>
+<label>Label</label><input name="label" required>
+<div class="row"><div><label>Type</label><select name="type"></select></div><div><label>Split</label><input name="split" placeholder="workouts"></div></div>
+<label>Date</label><input type="date" name="date" required>
+<div class="row"><div><label>Start</label><input type="time" name="start" required></div><div><label>End</label><input type="time" name="end" required></div></div>
+<label>Notes</label><textarea name="notes" rows="2"></textarea>
+<div class="acts"><button type="button" class="del" id="delb" onclick="delEv()">Delete</button><button type="button" onclick="dlg.close()">Cancel</button><button class="gold" type="submit">Save</button></div></form></dialog>
+<script>
+const TYPES=["chartright","ea","sleep","workout","meal","commute","guelph","event"],NAMES={chartright:"Chartright",ea:"EA",sleep:"Sleep",workout:"Workout",meal:"Meal",commute:"Commute",guelph:"Guelph",event:"Event"};
+const K="schedule.overrides.v1",PX=40;let base=null,ov=JSON.parse(localStorage.getItem(K)||'{"edits":{},"deleted":[],"added":[]}'),view=innerWidth<700?"day":"week",cur=new Date(),editing=null;
+const pad=n=>String(n).padStart(2,"0"),iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()),mins=t=>{const[h,m]=t.split(":").map(Number);return h*60+m};
+const parse=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+function events(){const del=new Set(ov.deleted);return base.events.filter(e=>!del.has(e.id)).map(e=>ov.edits[e.id]?{...e,...ov.edits[e.id],_o:1}:e).concat(ov.added.map(e=>({...e,_o:1})))}
+function save(){localStorage.setItem(K,JSON.stringify(ov));render()}
+function nOv(){return Object.keys(ov.edits).length+ov.deleted.length+ov.added.length}
+function weekStart(d){const x=new Date(d);x.setDate(x.getDate()-x.getDay());x.setHours(0,0,0,0);return x} // Sunday-start... use Sat:
+function wStart(d){const x=new Date(d);x.setHours(0,0,0,0);x.setDate(x.getDate()-((x.getDay()+1)%7));return x}
+function setView(v){view=v;render()}function nav(k){cur.setDate(cur.getDate()+(view=="week"?7:1)*k);render()}function goToday(){cur=new Date();render()}
+function fmt(t){const m=mins(t);if(m>=1440)return"12:00 AM";const h=Math.floor(m/60),mm=m%60;return((h%12)||12)+":"+pad(mm)+" "+(h<12?"AM":"PM")}
+function render(){vw.className=view=="week"?"on":"";vd.className=view=="day"?"on":"";const n=nOv();banner.style.display=n?"flex":"none";bantxt.textContent=`✎ ${n} local change${n>1?"s":""} (saved on this device only)`;
+const E=events(),today=iso(new Date());main.innerHTML="";
+if(view=="week"){const s=wStart(cur),days=[...Array(7)].map((_,i)=>{const d=new Date(s);d.setDate(d.getDate()+i);return d});
+title.textContent=days[0].toLocaleDateString(undefined,{month:"short",day:"numeric"})+" – "+days[6].toLocaleDateString(undefined,{month:"short",day:"numeric"});
+let h='<div class="week"><div></div>'+days.map(d=>`<div class="dh ${iso(d)==today?"today":""}" onclick="cur=parse('${iso(d)}');setView('day')">${d.toLocaleDateString(undefined,{weekday:"short"})}<b>${d.getDate()}</b></div>`).join("");
+h+='<div class="hrs">'+[...Array(24)].map((_,i)=>i?`<div style="top:${i*PX}px">${pad(i)}</div>`:"").join("")+'</div>';
+for(const d of days){const ds=iso(d),L=E.filter(e=>e.date==ds).sort((a,b)=>mins(a.start)-mins(b.start));
+h+='<div class="col">'+[...Array(24)].map((_,i)=>`<div class="hl" style="top:${i*PX}px"></div>`).join("");
+const bg=L.filter(e=>["sleep","guelph","chartright","ea","event"].includes(e.type)),fg=L.filter(e=>!bg.includes(e));
+for(const e of bg.concat(fg)){const t=mins(e.start)*PX/60,ht=Math.max((mins(e.end)-mins(e.start))*PX/60,12),small=fg.includes(e)&&["meal","commute"].includes(e.type);
+h+=`<div class="ev ${e._o?"over":""}" onclick="openEd('${e.id}')" style="top:${t}px;height:${ht}px;background:var(--${e.type});${small?"left:40%;right:2px;":"left:2px;right:2px;"}${e.type=="guelph"?"opacity:.55;":""}" title="${e.label}">${e.split||e.label}</div>`}
+if(ds==today){const nw=new Date();h+=`<div class="now" style="top:${(nw.getHours()*60+nw.getMinutes())*PX/60}px"></div>`}h+='</div>'}
+main.innerHTML=h+'</div>'}
+else{const ds=iso(cur);title.textContent=cur.toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"});
+const L=E.filter(e=>e.date==ds).sort((a,b)=>mins(a.start)-mins(b.start)),nm=new Date().getHours()*60+new Date().getMinutes();
+main.innerHTML='<div class="agenda">'+(L.length?L.map(e=>`<div class="it" onclick="openEd('${e.id}')" style="${ds==today&&mins(e.end)<nm?"opacity:.45":""}"><div class="dot" style="background:var(--${e.type})"></div><div class="t">${fmt(e.start)}<br>${fmt(e.end)}</div><div><div class="l">${e.label}${e._o?' <small style="color:var(--gold)">✎ edited</small>':""}</div><div class="n">${NAMES[e.type]}${e.split&&e.split!=e.label?" · "+e.split:""}${e.notes?" · "+e.notes:""}</div></div></div>`).join(""):'<p style="color:var(--muted);text-align:center;margin-top:40px">Nothing scheduled.</p>')+'</div>'}}
+const f=document.getElementById("f");f.type.innerHTML=TYPES.map(t=>`<option value="${t}">${NAMES[t]}</option>`).join("");
+function openEd(id){editing=id||null;const e=id?events().find(x=>x.id==id):{label:"",type:"event",date:iso(cur),start:"09:00",end:"10:00",notes:"",split:""};
+for(const k of["label","type","date","start","end","notes","split"])f[k].value=k=="end"&&e.end=="24:00"?"23:59":(e[k]||"");dt.textContent=id?"Edit event":"New event";delb.style.display=id?"":"none";dlg.showModal()}
+f.onsubmit=()=>{const v={};for(const k of["label","type","date","start","end","notes","split"])v[k]=f[k].value;if(v.end=="23:59")v.end="24:00";if(!v.split)delete v.split;
+if(!editing)ov.added.push({id:"u"+Date.now(),...v});else{const a=ov.added.find(x=>x.id==editing);a?Object.assign(a,v):ov.edits[editing]=v}save()};
+function delEv(){const a=ov.added.findIndex(x=>x.id==editing);if(a>=0)ov.added.splice(a,1);else{ov.deleted.push(editing);delete ov.edits[editing]}dlg.close();save()}
+function resetAll(){if(confirm("Discard all local changes and reload from the published schedule?")){ov={edits:{},deleted:[],added:[]};save()}}
+function exportJSON(){const out={...base,updated:new Date().toISOString(),events:events().map(({_o,...e})=>e)};const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:"application/json"}));a.download="schedule.json";a.click()}
+legend.innerHTML=TYPES.map(t=>`<span style="--c:var(--${t})">${NAMES[t]}</span>`).join("");
+fetch("data/schedule.json?"+Date.now()).then(r=>r.json()).then(d=>{base=d;upd.textContent="Updated "+new Date(d.updated).toLocaleString(undefined,{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
+const t=iso(new Date());if(!d.events.some(e=>e.date>=t)&&d.events.length)cur=parse(d.events[0].date);render();setInterval(render,60000)}).catch(e=>upd.textContent="Couldn't load schedule");
+</script></body></html>

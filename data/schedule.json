@@ -1,0 +1,587 @@
+{
+ "timezone": "America/Toronto",
+ "updated": "2026-10-17T01:39:11+00:00",
+ "events": [
+  {
+   "date": "2026-10-17",
+   "start": "00:00",
+   "end": "04:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e1"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "04:00",
+   "end": "04:30",
+   "type": "meal",
+   "label": "Breakfast",
+   "notes": "",
+   "id": "e2"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "04:00",
+   "end": "05:00",
+   "type": "commute",
+   "label": "Prep + commute",
+   "notes": "",
+   "id": "e3"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e4"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "10:30",
+   "end": "11:00",
+   "type": "meal",
+   "label": "Lunch at work",
+   "notes": "",
+   "id": "e5"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "15:30",
+   "end": "16:30",
+   "type": "commute",
+   "label": "Commute home",
+   "notes": "",
+   "id": "e6"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "16:30",
+   "end": "17:15",
+   "type": "workout",
+   "label": "Chest & Shoulders",
+   "notes": "Shortened to 45 min",
+   "split": "Chest & Shoulders",
+   "id": "e7"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "17:15",
+   "end": "17:45",
+   "type": "meal",
+   "label": "Early dinner",
+   "notes": "",
+   "id": "e8"
+  },
+  {
+   "date": "2026-10-17",
+   "start": "18:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Up at 01:45 for EA",
+   "id": "e9"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "00:00",
+   "end": "01:45",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e10"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "01:45",
+   "end": "02:45",
+   "type": "commute",
+   "label": "Prep + commute",
+   "notes": "",
+   "id": "e11"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "02:45",
+   "end": "06:30",
+   "type": "ea",
+   "label": "EA – YKF GH Lead",
+   "notes": "",
+   "id": "e12"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "06:30",
+   "end": "07:30",
+   "type": "meal",
+   "label": "Home + breakfast",
+   "notes": "",
+   "id": "e13"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "07:30",
+   "end": "10:30",
+   "type": "sleep",
+   "label": "Nap",
+   "notes": "",
+   "id": "e14"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "11:00",
+   "end": "11:30",
+   "type": "meal",
+   "label": "Lunch",
+   "notes": "",
+   "id": "e15"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "12:00",
+   "end": "13:15",
+   "type": "workout",
+   "label": "Back & Hamstrings",
+   "notes": "",
+   "split": "Back & Hamstrings",
+   "id": "e16"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "13:45",
+   "end": "21:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "",
+   "id": "e17"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "18:30",
+   "end": "19:00",
+   "type": "meal",
+   "label": "Dinner",
+   "notes": "",
+   "id": "e18"
+  },
+  {
+   "date": "2026-10-18",
+   "start": "22:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e19"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "00:00",
+   "end": "07:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e20"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "07:30",
+   "end": "08:00",
+   "type": "meal",
+   "label": "Breakfast",
+   "notes": "",
+   "id": "e21"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "08:45",
+   "end": "10:00",
+   "type": "workout",
+   "label": "Quads & Calves",
+   "notes": "",
+   "split": "Quads & Calves",
+   "id": "e22"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "10:45",
+   "end": "16:15",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "Back before 17:00 departure",
+   "id": "e23"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "12:30",
+   "end": "13:00",
+   "type": "meal",
+   "label": "Lunch",
+   "notes": "",
+   "id": "e24"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "16:15",
+   "end": "16:45",
+   "type": "meal",
+   "label": "Early dinner",
+   "notes": "",
+   "id": "e25"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "17:00",
+   "end": "18:00",
+   "type": "commute",
+   "label": "Commute",
+   "notes": "",
+   "id": "e26"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "18:00",
+   "end": "21:00",
+   "type": "ea",
+   "label": "EA – YKF GH Lead",
+   "notes": "",
+   "id": "e27"
+  },
+  {
+   "date": "2026-10-19",
+   "start": "21:00",
+   "end": "22:00",
+   "type": "commute",
+   "label": "Commute home + snack",
+   "notes": "",
+   "id": "e28"
+  },
+  {
+   "date": "2026-10-20",
+   "start": "01:00",
+   "end": "09:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Later bedtime for late shift",
+   "id": "e29"
+  },
+  {
+   "date": "2026-10-20",
+   "start": "09:15",
+   "end": "09:45",
+   "type": "meal",
+   "label": "Breakfast",
+   "notes": "",
+   "id": "e30"
+  },
+  {
+   "date": "2026-10-20",
+   "start": "13:00",
+   "end": "13:30",
+   "type": "meal",
+   "label": "Lunch",
+   "notes": "",
+   "id": "e31"
+  },
+  {
+   "date": "2026-10-20",
+   "start": "14:00",
+   "end": "15:00",
+   "type": "commute",
+   "label": "Commute",
+   "notes": "",
+   "id": "e32"
+  },
+  {
+   "date": "2026-10-20",
+   "start": "15:00",
+   "end": "24:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Rest day; ends 01:30 Wed",
+   "id": "e33"
+  },
+  {
+   "date": "2026-10-20",
+   "start": "19:30",
+   "end": "20:00",
+   "type": "meal",
+   "label": "Dinner at work",
+   "notes": "",
+   "id": "e34"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "00:00",
+   "end": "01:30",
+   "type": "chartright",
+   "label": "Chartright shift (cont.)",
+   "notes": "",
+   "id": "e35"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "01:30",
+   "end": "02:30",
+   "type": "commute",
+   "label": "Commute home",
+   "notes": "",
+   "id": "e36"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "02:30",
+   "end": "07:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Only 4.5h",
+   "id": "e37"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "07:00",
+   "end": "08:00",
+   "type": "commute",
+   "label": "Commute",
+   "notes": "",
+   "id": "e38"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "07:15",
+   "end": "07:45",
+   "type": "meal",
+   "label": "Breakfast",
+   "notes": "",
+   "id": "e39"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "08:00",
+   "end": "18:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Rest day",
+   "id": "e40"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "12:30",
+   "end": "13:00",
+   "type": "meal",
+   "label": "Lunch at work",
+   "notes": "",
+   "id": "e41"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "18:30",
+   "end": "19:30",
+   "type": "commute",
+   "label": "Commute home",
+   "notes": "",
+   "id": "e42"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "19:30",
+   "end": "20:00",
+   "type": "meal",
+   "label": "Quick dinner",
+   "notes": "",
+   "id": "e43"
+  },
+  {
+   "date": "2026-10-21",
+   "start": "20:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "6.5h – nap if you can",
+   "id": "e44"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "00:00",
+   "end": "02:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e45"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "02:45",
+   "end": "03:15",
+   "type": "meal",
+   "label": "Breakfast",
+   "notes": "",
+   "id": "e46"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "02:30",
+   "end": "03:30",
+   "type": "commute",
+   "label": "Prep + commute",
+   "notes": "",
+   "id": "e47"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "03:30",
+   "end": "14:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e48"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "09:30",
+   "end": "10:00",
+   "type": "meal",
+   "label": "Lunch at work",
+   "notes": "",
+   "id": "e49"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "14:00",
+   "end": "15:00",
+   "type": "commute",
+   "label": "Commute home",
+   "notes": "",
+   "id": "e50"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "15:00",
+   "end": "16:15",
+   "type": "workout",
+   "label": "Shoulders & Triceps",
+   "notes": "",
+   "split": "Shoulders & Triceps",
+   "id": "e51"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "18:00",
+   "end": "18:30",
+   "type": "meal",
+   "label": "Dinner",
+   "notes": "",
+   "id": "e52"
+  },
+  {
+   "date": "2026-10-22",
+   "start": "21:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e53"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "00:00",
+   "end": "05:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e54"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "06:00",
+   "end": "06:30",
+   "type": "meal",
+   "label": "Breakfast",
+   "notes": "",
+   "id": "e55"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "06:45",
+   "end": "08:00",
+   "type": "workout",
+   "label": "Back & Biceps",
+   "notes": "Move to evening if ceremony is in the morning",
+   "split": "Back & Biceps",
+   "id": "e56"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "10:00",
+   "end": "15:00",
+   "type": "event",
+   "label": "🎓 Graduation – UWaterloo",
+   "notes": "Placeholder time – confirm ceremony time",
+   "id": "e57"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "18:00",
+   "end": "19:30",
+   "type": "meal",
+   "label": "Celebration dinner",
+   "notes": "",
+   "id": "e58"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "19:30",
+   "end": "21:00",
+   "type": "guelph",
+   "label": "Open for Guelph (if free)",
+   "notes": "",
+   "id": "e59"
+  },
+  {
+   "date": "2026-10-23",
+   "start": "21:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Sat shift 05:00, wake 04:00",
+   "id": "e60"
+  },
+  {
+   "date": "2026-10-24",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e61"
+  },
+  {
+   "date": "2026-10-28",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e62"
+  },
+  {
+   "date": "2026-10-29",
+   "start": "03:30",
+   "end": "14:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e63"
+  },
+  {
+   "date": "2026-10-30",
+   "start": "03:30",
+   "end": "14:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e64"
+  }
+ ]
+}
