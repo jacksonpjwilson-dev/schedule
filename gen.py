@@ -3,6 +3,9 @@
 import json,datetime
 E=[]
 def ev(d,s,e,t,l,n="",split=None):
+    if t=="meal":
+        if l.startswith(("Drive","Home")): t="commute"; l=l.split(" +")[0]; n=""
+        else: return
     x={"date":f"2026-10-{d:02d}","start":s,"end":e,"type":t,"label":l,"notes":n}
     if split:x["split"]=split
     E.append(x)
@@ -80,8 +83,49 @@ ev(23,"10:00","15:00","event","🎓 Graduation – UWaterloo","Placeholder time 
 ev(23,"18:00","19:30","meal","Celebration dinner")
 ev(23,"19:30","21:00","guelph","Open for Guelph (if free)")
 ev(23,"21:00","24:00","sleep","Sleep","Only 7h (wake 04:00 for Sat 05:00 shift) - bed 20:00 for 8h")
-for d,s,e in [(24,"05:00","15:30"),(28,"05:00","15:30"),(29,"03:30","14:00"),(30,"03:30","14:00")]:
-    ev(d,s,e,"chartright","Chartright shift")
+# ---- Week 2 (Payworks: no EA shifts Oct 20-Nov 1) ----
+def gym(d,ds,gs,ge,de,dh,name):
+    ev(d,ds,gs,"commute","Drive to gym"); ev(d,gs,ge,"workout",name,"2h",name); ev(d,ge,de if dh else de,"commute","Drive home")
+# Sat 24
+ev(24,"00:00","04:00","sleep","Sleep")
+ev(24,"04:00","05:00","commute","Prep + commute")
+ev(24,"05:00","15:30","chartright","Chartright shift")
+gym(24,"15:30","16:00","18:00","19:00",1,"Hamstrings & Quads")
+ev(24,"22:00","24:00","sleep","Sleep")
+# Sun 25
+ev(25,"00:00","06:00","sleep","Sleep")
+gym(25,"09:30","10:00","12:00","12:30",1,"Arms & Calves")
+ev(25,"13:00","21:00","guelph","Open for Guelph")
+ev(25,"22:30","24:00","sleep","Sleep")
+# Mon 26
+ev(26,"00:00","06:30","sleep","Sleep")
+gym(26,"09:30","10:00","12:00","12:30",1,"Chest & Shoulders")
+ev(26,"13:00","21:00","guelph","Open for Guelph")
+ev(26,"22:30","24:00","sleep","Sleep")
+# Tue 27
+ev(27,"00:00","06:30","sleep","Sleep")
+gym(27,"09:00","09:30","11:30","12:00",1,"Back & Hamstrings")
+ev(27,"12:30","19:00","guelph","Open for Guelph","Back by 19:00 - early bed for Wed 05:00 shift")
+ev(27,"20:00","24:00","sleep","Sleep","Wake 04:00")
+# Wed 28 (rest)
+ev(28,"00:00","04:00","sleep","Sleep")
+ev(28,"04:00","05:00","commute","Prep + commute")
+ev(28,"05:00","15:30","chartright","Chartright shift","Rest day")
+ev(28,"15:30","16:30","commute","Commute home")
+ev(28,"18:30","24:00","sleep","Sleep","Thu shift 03:30, wake 02:30")
+# Thu 29
+ev(29,"00:00","02:30","sleep","Sleep")
+ev(29,"02:30","03:30","commute","Prep + commute")
+ev(29,"03:30","14:00","chartright","Chartright shift")
+gym(29,"14:00","14:30","16:30","17:30",1,"Quads & Calves")
+ev(29,"18:30","24:00","sleep","Sleep","Fri shift 03:30, wake 02:30")
+# Fri 30 (rest)
+ev(30,"00:00","02:30","sleep","Sleep")
+ev(30,"02:30","03:30","commute","Prep + commute")
+ev(30,"03:30","14:00","chartright","Chartright shift","Rest day")
+ev(30,"14:00","15:00","commute","Commute home")
+ev(30,"15:30","21:00","guelph","Open for Guelph")
+ev(30,"22:00","24:00","sleep","Sleep")
 for i,x in enumerate(E):x["id"]=f"e{i+1}"
 json.dump({"timezone":"America/Toronto","updated":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),"events":E},open("data/schedule.json","w"),indent=1,ensure_ascii=False)
 print(len(E),"events")

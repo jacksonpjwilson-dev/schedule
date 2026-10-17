@@ -51,7 +51,7 @@ label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}input,se
 <label>Notes</label><textarea name="notes" rows="2"></textarea>
 <div class="acts"><button type="button" class="del" id="delb" onclick="delEv()">Delete</button><button type="button" onclick="dlg.close()">Cancel</button><button class="gold" type="submit">Save</button></div></form></dialog>
 <script>
-const TYPES=["chartright","ea","sleep","workout","meal","commute","guelph","event"],NAMES={chartright:"Chartright",ea:"EA",sleep:"Sleep",workout:"Workout",meal:"Meal",commute:"Commute",guelph:"Guelph",event:"Event"};
+const TYPES=["chartright","ea","sleep","workout","commute","guelph","event"],NAMES={chartright:"Chartright",ea:"EA",sleep:"Sleep",workout:"Workout",meal:"Meal",commute:"Commute",guelph:"Guelph",event:"Event"};
 const K="schedule.overrides.v1",PX=40;let base=null,ov=JSON.parse(localStorage.getItem(K)||'{"edits":{},"deleted":[],"added":[]}'),view=innerWidth<700?"day":"week",cur=new Date(),editing=null;
 const pad=n=>String(n).padStart(2,"0"),iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()),mins=t=>{const[h,m]=t.split(":").map(Number);return h*60+m};
 const parse=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
