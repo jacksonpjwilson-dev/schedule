@@ -3,6 +3,7 @@
 import json,datetime
 E=[]
 def ev(d,s,e,t,l,n="",split=None):
+    if t in("commute","meal"): return
     if t=="meal":
         if l.startswith(("Drive","Home")): t="commute"; l=l.split(" +")[0]; n=""
         else: return

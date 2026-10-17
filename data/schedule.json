@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-17T02:24:50+00:00",
+ "updated": "2026-10-17T02:28:38+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -13,30 +13,12 @@
   },
   {
    "date": "2026-10-17",
-   "start": "04:20",
-   "end": "05:00",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e2"
-  },
-  {
-   "date": "2026-10-17",
    "start": "05:00",
    "end": "15:30",
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "",
-   "id": "e3"
-  },
-  {
-   "date": "2026-10-17",
-   "start": "15:30",
-   "end": "16:00",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e4"
+   "id": "e2"
   },
   {
    "date": "2026-10-17",
@@ -46,16 +28,7 @@
    "label": "Chest & Shoulders",
    "notes": "2h. Option: cut to 1h (16:00-17:00) to be in bed by 18:00 (7.75h)",
    "split": "Chest & Shoulders",
-   "id": "e5"
-  },
-  {
-   "date": "2026-10-17",
-   "start": "18:00",
-   "end": "19:00",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e6"
+   "id": "e3"
   },
   {
    "date": "2026-10-17",
@@ -64,7 +37,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Only 6.75h (19:00-01:45) - nap after Sun EA shift",
-   "id": "e7"
+   "id": "e4"
   },
   {
    "date": "2026-10-18",
@@ -73,16 +46,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e8"
-  },
-  {
-   "date": "2026-10-18",
-   "start": "01:45",
-   "end": "02:45",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e9"
+   "id": "e5"
   },
   {
    "date": "2026-10-18",
@@ -91,16 +55,7 @@
    "type": "ea",
    "label": "EA – YKF GH Lead",
    "notes": "",
-   "id": "e10"
-  },
-  {
-   "date": "2026-10-18",
-   "start": "06:30",
-   "end": "07:30",
-   "type": "commute",
-   "label": "Home",
-   "notes": "",
-   "id": "e11"
+   "id": "e6"
   },
   {
    "date": "2026-10-18",
@@ -109,16 +64,7 @@
    "type": "sleep",
    "label": "Nap",
    "notes": "",
-   "id": "e12"
-  },
-  {
-   "date": "2026-10-18",
-   "start": "11:30",
-   "end": "12:00",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e13"
+   "id": "e7"
   },
   {
    "date": "2026-10-18",
@@ -128,16 +74,7 @@
    "label": "Back & Hamstrings",
    "notes": "",
    "split": "Back & Hamstrings",
-   "id": "e14"
-  },
-  {
-   "date": "2026-10-18",
-   "start": "14:00",
-   "end": "14:30",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e15"
+   "id": "e8"
   },
   {
    "date": "2026-10-18",
@@ -146,7 +83,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e16"
+   "id": "e9"
   },
   {
    "date": "2026-10-18",
@@ -155,7 +92,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e17"
+   "id": "e10"
   },
   {
    "date": "2026-10-19",
@@ -164,16 +101,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e18"
-  },
-  {
-   "date": "2026-10-19",
-   "start": "08:00",
-   "end": "08:30",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e19"
+   "id": "e11"
   },
   {
    "date": "2026-10-19",
@@ -183,16 +111,7 @@
    "label": "Quads & Calves",
    "notes": "",
    "split": "Quads & Calves",
-   "id": "e20"
-  },
-  {
-   "date": "2026-10-19",
-   "start": "10:30",
-   "end": "11:00",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e21"
+   "id": "e12"
   },
   {
    "date": "2026-10-19",
@@ -201,16 +120,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "Back before 17:00 departure",
-   "id": "e22"
-  },
-  {
-   "date": "2026-10-19",
-   "start": "17:00",
-   "end": "18:00",
-   "type": "commute",
-   "label": "Commute",
-   "notes": "",
-   "id": "e23"
+   "id": "e13"
   },
   {
    "date": "2026-10-19",
@@ -219,16 +129,7 @@
    "type": "ea",
    "label": "EA – YKF GH Lead",
    "notes": "",
-   "id": "e24"
-  },
-  {
-   "date": "2026-10-19",
-   "start": "21:00",
-   "end": "22:00",
-   "type": "commute",
-   "label": "Commute home + snack",
-   "notes": "",
-   "id": "e25"
+   "id": "e14"
   },
   {
    "date": "2026-10-20",
@@ -237,16 +138,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Later bedtime for late shift",
-   "id": "e26"
-  },
-  {
-   "date": "2026-10-20",
-   "start": "14:00",
-   "end": "15:00",
-   "type": "commute",
-   "label": "Commute",
-   "notes": "",
-   "id": "e27"
+   "id": "e15"
   },
   {
    "date": "2026-10-20",
@@ -255,7 +147,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "Rest day; ends 01:30 Wed",
-   "id": "e28"
+   "id": "e16"
   },
   {
    "date": "2026-10-21",
@@ -264,16 +156,7 @@
    "type": "chartright",
    "label": "Chartright shift (cont.)",
    "notes": "",
-   "id": "e29"
-  },
-  {
-   "date": "2026-10-21",
-   "start": "01:30",
-   "end": "02:30",
-   "type": "commute",
-   "label": "Commute home",
-   "notes": "",
-   "id": "e30"
+   "id": "e17"
   },
   {
    "date": "2026-10-21",
@@ -282,16 +165,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Only 4.5h",
-   "id": "e31"
-  },
-  {
-   "date": "2026-10-21",
-   "start": "07:20",
-   "end": "08:00",
-   "type": "commute",
-   "label": "Commute",
-   "notes": "",
-   "id": "e32"
+   "id": "e18"
   },
   {
    "date": "2026-10-21",
@@ -300,16 +174,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "Rest day",
-   "id": "e33"
-  },
-  {
-   "date": "2026-10-21",
-   "start": "18:30",
-   "end": "19:30",
-   "type": "commute",
-   "label": "Commute home",
-   "notes": "",
-   "id": "e34"
+   "id": "e19"
   },
   {
    "date": "2026-10-21",
@@ -318,7 +183,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "6.5h – nap if you can",
-   "id": "e35"
+   "id": "e20"
   },
   {
    "date": "2026-10-22",
@@ -327,16 +192,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e36"
-  },
-  {
-   "date": "2026-10-22",
-   "start": "02:50",
-   "end": "03:30",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e37"
+   "id": "e21"
   },
   {
    "date": "2026-10-22",
@@ -345,16 +201,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "",
-   "id": "e38"
-  },
-  {
-   "date": "2026-10-22",
-   "start": "14:00",
-   "end": "14:30",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e39"
+   "id": "e22"
   },
   {
    "date": "2026-10-22",
@@ -364,16 +211,7 @@
    "label": "Shoulders & Triceps",
    "notes": "",
    "split": "Shoulders & Triceps",
-   "id": "e40"
-  },
-  {
-   "date": "2026-10-22",
-   "start": "16:30",
-   "end": "17:30",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e41"
+   "id": "e23"
   },
   {
    "date": "2026-10-22",
@@ -382,7 +220,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e42"
+   "id": "e24"
   },
   {
    "date": "2026-10-23",
@@ -391,16 +229,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e43"
-  },
-  {
-   "date": "2026-10-23",
-   "start": "06:30",
-   "end": "07:00",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e44"
+   "id": "e25"
   },
   {
    "date": "2026-10-23",
@@ -410,16 +239,7 @@
    "label": "Back & Biceps",
    "notes": "Tight before a 10:00 ceremony - move if needed",
    "split": "Back & Biceps",
-   "id": "e45"
-  },
-  {
-   "date": "2026-10-23",
-   "start": "09:00",
-   "end": "09:30",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e46"
+   "id": "e26"
   },
   {
    "date": "2026-10-23",
@@ -428,7 +248,7 @@
    "type": "event",
    "label": "🎓 Graduation – UWaterloo",
    "notes": "Placeholder time – confirm ceremony time",
-   "id": "e47"
+   "id": "e27"
   },
   {
    "date": "2026-10-23",
@@ -437,7 +257,7 @@
    "type": "guelph",
    "label": "Open for Guelph (if free)",
    "notes": "",
-   "id": "e48"
+   "id": "e28"
   },
   {
    "date": "2026-10-23",
@@ -446,7 +266,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Only 7h (wake 04:00 for Sat 05:00 shift) - bed 20:00 for 8h",
-   "id": "e49"
+   "id": "e29"
   },
   {
    "date": "2026-10-24",
@@ -455,16 +275,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e50"
-  },
-  {
-   "date": "2026-10-24",
-   "start": "04:00",
-   "end": "05:00",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e51"
+   "id": "e30"
   },
   {
    "date": "2026-10-24",
@@ -473,16 +284,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "",
-   "id": "e52"
-  },
-  {
-   "date": "2026-10-24",
-   "start": "15:30",
-   "end": "16:00",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e53"
+   "id": "e31"
   },
   {
    "date": "2026-10-24",
@@ -492,16 +294,7 @@
    "label": "Hamstrings & Quads",
    "notes": "2h",
    "split": "Hamstrings & Quads",
-   "id": "e54"
-  },
-  {
-   "date": "2026-10-24",
-   "start": "18:00",
-   "end": "19:00",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e55"
+   "id": "e32"
   },
   {
    "date": "2026-10-24",
@@ -510,7 +303,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e56"
+   "id": "e33"
   },
   {
    "date": "2026-10-25",
@@ -519,16 +312,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e57"
-  },
-  {
-   "date": "2026-10-25",
-   "start": "09:30",
-   "end": "10:00",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e58"
+   "id": "e34"
   },
   {
    "date": "2026-10-25",
@@ -538,16 +322,7 @@
    "label": "Arms & Calves",
    "notes": "2h",
    "split": "Arms & Calves",
-   "id": "e59"
-  },
-  {
-   "date": "2026-10-25",
-   "start": "12:00",
-   "end": "12:30",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e60"
+   "id": "e35"
   },
   {
    "date": "2026-10-25",
@@ -556,7 +331,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e61"
+   "id": "e36"
   },
   {
    "date": "2026-10-25",
@@ -565,7 +340,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e62"
+   "id": "e37"
   },
   {
    "date": "2026-10-26",
@@ -574,16 +349,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e63"
-  },
-  {
-   "date": "2026-10-26",
-   "start": "09:30",
-   "end": "10:00",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e64"
+   "id": "e38"
   },
   {
    "date": "2026-10-26",
@@ -593,16 +359,7 @@
    "label": "Chest & Shoulders",
    "notes": "2h",
    "split": "Chest & Shoulders",
-   "id": "e65"
-  },
-  {
-   "date": "2026-10-26",
-   "start": "12:00",
-   "end": "12:30",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e66"
+   "id": "e39"
   },
   {
    "date": "2026-10-26",
@@ -611,7 +368,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e67"
+   "id": "e40"
   },
   {
    "date": "2026-10-26",
@@ -620,7 +377,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e68"
+   "id": "e41"
   },
   {
    "date": "2026-10-27",
@@ -629,16 +386,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e69"
-  },
-  {
-   "date": "2026-10-27",
-   "start": "09:00",
-   "end": "09:30",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e70"
+   "id": "e42"
   },
   {
    "date": "2026-10-27",
@@ -648,16 +396,7 @@
    "label": "Back & Hamstrings",
    "notes": "2h",
    "split": "Back & Hamstrings",
-   "id": "e71"
-  },
-  {
-   "date": "2026-10-27",
-   "start": "11:30",
-   "end": "12:00",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e72"
+   "id": "e43"
   },
   {
    "date": "2026-10-27",
@@ -666,7 +405,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "Back by 19:00 - early bed for Wed 05:00 shift",
-   "id": "e73"
+   "id": "e44"
   },
   {
    "date": "2026-10-27",
@@ -675,7 +414,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Wake 04:00",
-   "id": "e74"
+   "id": "e45"
   },
   {
    "date": "2026-10-28",
@@ -684,16 +423,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e75"
-  },
-  {
-   "date": "2026-10-28",
-   "start": "04:00",
-   "end": "05:00",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e76"
+   "id": "e46"
   },
   {
    "date": "2026-10-28",
@@ -702,16 +432,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "Rest day",
-   "id": "e77"
-  },
-  {
-   "date": "2026-10-28",
-   "start": "15:30",
-   "end": "16:30",
-   "type": "commute",
-   "label": "Commute home",
-   "notes": "",
-   "id": "e78"
+   "id": "e47"
   },
   {
    "date": "2026-10-28",
@@ -720,7 +441,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Thu shift 03:30, wake 02:30",
-   "id": "e79"
+   "id": "e48"
   },
   {
    "date": "2026-10-29",
@@ -729,16 +450,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e80"
-  },
-  {
-   "date": "2026-10-29",
-   "start": "02:30",
-   "end": "03:30",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e81"
+   "id": "e49"
   },
   {
    "date": "2026-10-29",
@@ -747,16 +459,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "",
-   "id": "e82"
-  },
-  {
-   "date": "2026-10-29",
-   "start": "14:00",
-   "end": "14:30",
-   "type": "commute",
-   "label": "Drive to gym",
-   "notes": "",
-   "id": "e83"
+   "id": "e50"
   },
   {
    "date": "2026-10-29",
@@ -766,16 +469,7 @@
    "label": "Quads & Calves",
    "notes": "2h",
    "split": "Quads & Calves",
-   "id": "e84"
-  },
-  {
-   "date": "2026-10-29",
-   "start": "16:30",
-   "end": "17:30",
-   "type": "commute",
-   "label": "Drive home",
-   "notes": "",
-   "id": "e85"
+   "id": "e51"
   },
   {
    "date": "2026-10-29",
@@ -784,7 +478,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Fri shift 03:30, wake 02:30",
-   "id": "e86"
+   "id": "e52"
   },
   {
    "date": "2026-10-30",
@@ -793,16 +487,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e87"
-  },
-  {
-   "date": "2026-10-30",
-   "start": "02:30",
-   "end": "03:30",
-   "type": "commute",
-   "label": "Prep + commute",
-   "notes": "",
-   "id": "e88"
+   "id": "e53"
   },
   {
    "date": "2026-10-30",
@@ -811,16 +496,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "Rest day",
-   "id": "e89"
-  },
-  {
-   "date": "2026-10-30",
-   "start": "14:00",
-   "end": "15:00",
-   "type": "commute",
-   "label": "Commute home",
-   "notes": "",
-   "id": "e90"
+   "id": "e54"
   },
   {
    "date": "2026-10-30",
@@ -829,7 +505,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e91"
+   "id": "e55"
   },
   {
    "date": "2026-10-30",
@@ -838,7 +514,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e92"
+   "id": "e56"
   }
  ]
 }
