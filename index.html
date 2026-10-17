@@ -86,5 +86,5 @@ function resetAll(){if(confirm("Discard all local changes and reload from the pu
 function exportJSON(){const out={...base,updated:new Date().toISOString(),events:events().map(({_o,...e})=>e)};const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:"application/json"}));a.download="schedule.json";a.click()}
 legend.innerHTML=TYPES.map(t=>`<span style="--c:var(--${t})">${NAMES[t]}</span>`).join("");
 fetch("data/schedule.json?"+Date.now()).then(r=>r.json()).then(d=>{base=d;upd.textContent="Updated "+new Date(d.updated).toLocaleString(undefined,{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});
-const t=iso(new Date());if(!d.events.some(e=>e.date>=t)&&d.events.length)cur=parse(d.events[0].date);render();setInterval(render,60000)}).catch(e=>upd.textContent="Couldn't load schedule");
+const t=iso(new Date());if(d.events.length&&!d.events.some(e=>e.date==t)){const f=d.events.map(e=>e.date).filter(x=>x>t).sort()[0]||d.events[0].date;cur=parse(f)}render();setInterval(render,60000)}).catch(e=>upd.textContent="Couldn't load schedule");
 </script></body></html>
