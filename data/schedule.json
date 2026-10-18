@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-18T22:28:57+00:00",
+ "updated": "2026-10-18T22:30:08+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -225,7 +225,7 @@
   {
    "date": "2026-10-23",
    "start": "00:00",
-   "end": "05:30",
+   "end": "07:30",
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
@@ -233,11 +233,11 @@
   },
   {
    "date": "2026-10-23",
-   "start": "07:00",
-   "end": "09:00",
+   "start": "15:30",
+   "end": "17:30",
    "type": "workout",
    "label": "Back & Biceps",
-   "notes": "Tight before a 10:00 ceremony - move if needed",
+   "notes": "After the ceremony; skip if grad runs late",
    "split": "Back & Biceps",
    "id": "e26"
   },
