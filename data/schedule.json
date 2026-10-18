@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-18T04:09:22+00:00",
+ "updated": "2026-10-18T22:28:57+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -243,12 +243,21 @@
   },
   {
    "date": "2026-10-23",
+   "start": "08:30",
+   "end": "09:30",
+   "type": "event",
+   "label": "🎓 Gown pickup",
+   "notes": "Must be done the morning of",
+   "id": "e27"
+  },
+  {
+   "date": "2026-10-23",
    "start": "10:00",
    "end": "15:00",
    "type": "event",
    "label": "🎓 Graduation – UWaterloo",
-   "notes": "Placeholder time – confirm ceremony time",
-   "id": "e27"
+   "notes": "Ceremony starts 10:00; end time not confirmed",
+   "id": "e28"
   },
   {
    "date": "2026-10-23",
@@ -257,7 +266,7 @@
    "type": "guelph",
    "label": "Open for Guelph (if free)",
    "notes": "",
-   "id": "e28"
+   "id": "e29"
   },
   {
    "date": "2026-10-23",
@@ -266,7 +275,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Only 7h (wake 04:00 for Sat 05:00 shift) - bed 20:00 for 8h",
-   "id": "e29"
+   "id": "e30"
   },
   {
    "date": "2026-10-24",
@@ -275,7 +284,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e30"
+   "id": "e31"
   },
   {
    "date": "2026-10-24",
@@ -284,7 +293,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "",
-   "id": "e31"
+   "id": "e32"
   },
   {
    "date": "2026-10-24",
@@ -294,7 +303,7 @@
    "label": "Hamstrings & Quads",
    "notes": "2h",
    "split": "Hamstrings & Quads",
-   "id": "e32"
+   "id": "e33"
   },
   {
    "date": "2026-10-24",
@@ -303,7 +312,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e33"
+   "id": "e34"
   },
   {
    "date": "2026-10-25",
@@ -312,7 +321,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e34"
+   "id": "e35"
   },
   {
    "date": "2026-10-25",
@@ -322,7 +331,7 @@
    "label": "Arms & Calves",
    "notes": "2h",
    "split": "Arms & Calves",
-   "id": "e35"
+   "id": "e36"
   },
   {
    "date": "2026-10-25",
@@ -331,7 +340,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e36"
+   "id": "e37"
   },
   {
    "date": "2026-10-25",
@@ -340,7 +349,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e37"
+   "id": "e38"
   },
   {
    "date": "2026-10-26",
@@ -349,7 +358,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e38"
+   "id": "e39"
   },
   {
    "date": "2026-10-26",
@@ -359,7 +368,7 @@
    "label": "Chest & Shoulders",
    "notes": "2h",
    "split": "Chest & Shoulders",
-   "id": "e39"
+   "id": "e40"
   },
   {
    "date": "2026-10-26",
@@ -368,7 +377,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e40"
+   "id": "e41"
   },
   {
    "date": "2026-10-26",
@@ -377,7 +386,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e41"
+   "id": "e42"
   },
   {
    "date": "2026-10-27",
@@ -386,7 +395,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e42"
+   "id": "e43"
   },
   {
    "date": "2026-10-27",
@@ -396,7 +405,7 @@
    "label": "Back & Hamstrings",
    "notes": "2h",
    "split": "Back & Hamstrings",
-   "id": "e43"
+   "id": "e44"
   },
   {
    "date": "2026-10-27",
@@ -405,7 +414,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "Back by 19:00 - early bed for Wed 05:00 shift",
-   "id": "e44"
+   "id": "e45"
   },
   {
    "date": "2026-10-27",
@@ -414,7 +423,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Wake 04:00",
-   "id": "e45"
+   "id": "e46"
   },
   {
    "date": "2026-10-28",
@@ -423,7 +432,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e46"
+   "id": "e47"
   },
   {
    "date": "2026-10-28",
@@ -432,7 +441,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "Rest day",
-   "id": "e47"
+   "id": "e48"
   },
   {
    "date": "2026-10-28",
@@ -441,7 +450,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Thu shift 03:30, wake 02:30",
-   "id": "e48"
+   "id": "e49"
   },
   {
    "date": "2026-10-29",
@@ -450,7 +459,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e49"
+   "id": "e50"
   },
   {
    "date": "2026-10-29",
@@ -459,7 +468,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "",
-   "id": "e50"
+   "id": "e51"
   },
   {
    "date": "2026-10-29",
@@ -469,7 +478,7 @@
    "label": "Quads & Calves",
    "notes": "2h",
    "split": "Quads & Calves",
-   "id": "e51"
+   "id": "e52"
   },
   {
    "date": "2026-10-29",
@@ -478,7 +487,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "Fri shift 03:30, wake 02:30",
-   "id": "e52"
+   "id": "e53"
   },
   {
    "date": "2026-10-30",
@@ -487,7 +496,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e53"
+   "id": "e54"
   },
   {
    "date": "2026-10-30",
@@ -496,7 +505,7 @@
    "type": "chartright",
    "label": "Chartright shift",
    "notes": "Rest day",
-   "id": "e54"
+   "id": "e55"
   },
   {
    "date": "2026-10-30",
@@ -505,7 +514,7 @@
    "type": "guelph",
    "label": "Open for Guelph",
    "notes": "",
-   "id": "e55"
+   "id": "e56"
   },
   {
    "date": "2026-10-30",
@@ -514,7 +523,7 @@
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e56"
+   "id": "e57"
   },
   {
    "date": "2026-10-18",
@@ -524,7 +533,7 @@
    "label": "Weekly board meeting with the crew",
    "notes": "Recurring weekly (Sun) - overlaps Guelph open slot",
    "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e57"
+   "id": "e58"
   },
   {
    "date": "2026-10-25",
@@ -534,7 +543,7 @@
    "label": "Weekly board meeting with the crew",
    "notes": "Recurring weekly (Sun) - overlaps Guelph open slot",
    "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e58"
+   "id": "e59"
   }
  ]
 }
