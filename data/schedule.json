@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-18T22:30:08+00:00",
+ "updated": "2026-10-18T22:40:19+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -253,10 +253,10 @@
   {
    "date": "2026-10-23",
    "start": "10:00",
-   "end": "15:00",
+   "end": "13:00",
    "type": "event",
    "label": "🎓 Graduation – UWaterloo",
-   "notes": "Ceremony starts 10:00; end time not confirmed",
+   "notes": "Ends around 13:00 at the latest",
    "id": "e28"
   },
   {
