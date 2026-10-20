@@ -8,4 +8,5 @@ d=json.load(open(sys.argv[1]));d["updated"]=datetime.datetime.now(datetime.timez
 json.dump(d,open("data/schedule.json","w"),indent=1,ensure_ascii=False)
 P
 else python3 gen.py; fi
+python3 /workspace/fullapp-shared/firestore-writer/fswrite.py schedule data/schedule.json || echo "firestore schedule feed: skipped"
 git add -A && git commit -qm "Update schedule $(date -u +%FT%TZ)" && git push -q && echo pushed
