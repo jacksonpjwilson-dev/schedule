@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-22T04:10:56+00:00",
+ "updated": "2026-10-24T00:17:24+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -519,20 +519,507 @@
   {
    "date": "2026-10-30",
    "start": "15:30",
-   "end": "21:00",
+   "end": "19:00",
    "type": "guelph",
    "label": "Open for Guelph",
-   "notes": "",
+   "notes": "Back by 19:00 - early bed for Sat 05:00 shift",
    "id": "e57"
   },
   {
    "date": "2026-10-30",
+   "start": "20:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Wake 04:00",
+   "id": "e58"
+  },
+  {
+   "date": "2026-10-31",
+   "start": "00:00",
+   "end": "04:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e59"
+  },
+  {
+   "date": "2026-10-31",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e60"
+  },
+  {
+   "date": "2026-10-31",
+   "start": "16:00",
+   "end": "18:00",
+   "type": "workout",
+   "label": "Shoulders & Triceps",
+   "notes": "2h",
+   "split": "Shoulders & Triceps",
+   "id": "e61"
+  },
+  {
+   "date": "2026-10-31",
+   "start": "22:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Clocks fall back at 02:00 tonight (extra hour)",
+   "id": "e62"
+  },
+  {
+   "date": "2026-11-01",
+   "start": "00:00",
+   "end": "06:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e63"
+  },
+  {
+   "date": "2026-11-01",
+   "start": "10:00",
+   "end": "12:00",
+   "type": "workout",
+   "label": "Back & Biceps",
+   "notes": "2h",
+   "split": "Back & Biceps",
+   "id": "e64"
+  },
+  {
+   "date": "2026-11-01",
+   "start": "13:00",
+   "end": "17:30",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "Back before the 18:00 board meeting",
+   "id": "e65"
+  },
+  {
+   "date": "2026-11-01",
+   "start": "22:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e66"
+  },
+  {
+   "date": "2026-11-02",
+   "start": "00:00",
+   "end": "06:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e67"
+  },
+  {
+   "date": "2026-11-02",
+   "start": "10:00",
+   "end": "12:00",
+   "type": "workout",
+   "label": "Hamstrings & Quads",
+   "notes": "2h",
+   "split": "Hamstrings & Quads",
+   "id": "e68"
+  },
+  {
+   "date": "2026-11-02",
+   "start": "13:00",
+   "end": "21:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "",
+   "id": "e69"
+  },
+  {
+   "date": "2026-11-02",
+   "start": "22:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e70"
+  },
+  {
+   "date": "2026-11-03",
+   "start": "00:00",
+   "end": "06:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e71"
+  },
+  {
+   "date": "2026-11-03",
+   "start": "09:30",
+   "end": "11:30",
+   "type": "workout",
+   "label": "Arms & Calves",
+   "notes": "2h",
+   "split": "Arms & Calves",
+   "id": "e72"
+  },
+  {
+   "date": "2026-11-03",
+   "start": "12:30",
+   "end": "19:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "Back by 19:00 - early bed for Wed 05:00 shift",
+   "id": "e73"
+  },
+  {
+   "date": "2026-11-03",
+   "start": "20:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Wake 04:00",
+   "id": "e74"
+  },
+  {
+   "date": "2026-11-04",
+   "start": "00:00",
+   "end": "04:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e75"
+  },
+  {
+   "date": "2026-11-04",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Rest day",
+   "id": "e76"
+  },
+  {
+   "date": "2026-11-04",
    "start": "22:00",
    "end": "24:00",
    "type": "sleep",
    "label": "Sleep",
    "notes": "",
-   "id": "e58"
+   "id": "e77"
+  },
+  {
+   "date": "2026-11-05",
+   "start": "00:00",
+   "end": "06:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e78"
+  },
+  {
+   "date": "2026-11-05",
+   "start": "09:30",
+   "end": "11:30",
+   "type": "workout",
+   "label": "Chest & Shoulders",
+   "notes": "2h",
+   "split": "Chest & Shoulders",
+   "id": "e79"
+  },
+  {
+   "date": "2026-11-05",
+   "start": "12:30",
+   "end": "17:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "Back by 17:00 - bed 18:30 for Fri 03:30 shift",
+   "id": "e80"
+  },
+  {
+   "date": "2026-11-05",
+   "start": "18:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Fri shift 03:30, wake 02:30",
+   "id": "e81"
+  },
+  {
+   "date": "2026-11-06",
+   "start": "00:00",
+   "end": "02:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e82"
+  },
+  {
+   "date": "2026-11-06",
+   "start": "03:30",
+   "end": "14:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Rest day",
+   "id": "e83"
+  },
+  {
+   "date": "2026-11-06",
+   "start": "15:30",
+   "end": "19:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "Back by 19:00 - early bed for Sat 05:00 shift",
+   "id": "e84"
+  },
+  {
+   "date": "2026-11-06",
+   "start": "20:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Wake 04:00",
+   "id": "e85"
+  },
+  {
+   "date": "2026-11-07",
+   "start": "00:00",
+   "end": "04:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e86"
+  },
+  {
+   "date": "2026-11-07",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e87"
+  },
+  {
+   "date": "2026-11-07",
+   "start": "16:00",
+   "end": "18:00",
+   "type": "workout",
+   "label": "Back & Hamstrings",
+   "notes": "2h",
+   "split": "Back & Hamstrings",
+   "id": "e88"
+  },
+  {
+   "date": "2026-11-07",
+   "start": "22:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e89"
+  },
+  {
+   "date": "2026-11-08",
+   "start": "00:00",
+   "end": "06:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e90"
+  },
+  {
+   "date": "2026-11-08",
+   "start": "09:00",
+   "end": "11:00",
+   "type": "workout",
+   "label": "Quads & Calves",
+   "notes": "2h",
+   "split": "Quads & Calves",
+   "id": "e91"
+  },
+  {
+   "date": "2026-11-08",
+   "start": "15:00",
+   "end": "24:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Ends 01:30 Mon; overlaps the 18:00 board meeting",
+   "id": "e92"
+  },
+  {
+   "date": "2026-11-09",
+   "start": "00:00",
+   "end": "01:30",
+   "type": "chartright",
+   "label": "Chartright shift (cont.)",
+   "notes": "",
+   "id": "e93"
+  },
+  {
+   "date": "2026-11-09",
+   "start": "02:30",
+   "end": "10:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "After late shift",
+   "id": "e94"
+  },
+  {
+   "date": "2026-11-09",
+   "start": "15:00",
+   "end": "24:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Rest day; ends 01:30 Tue",
+   "id": "e95"
+  },
+  {
+   "date": "2026-11-10",
+   "start": "00:00",
+   "end": "01:30",
+   "type": "chartright",
+   "label": "Chartright shift (cont.)",
+   "notes": "",
+   "id": "e96"
+  },
+  {
+   "date": "2026-11-10",
+   "start": "02:30",
+   "end": "10:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "After late shift",
+   "id": "e97"
+  },
+  {
+   "date": "2026-11-10",
+   "start": "12:00",
+   "end": "14:00",
+   "type": "workout",
+   "label": "Shoulders & Triceps",
+   "notes": "2h",
+   "split": "Shoulders & Triceps",
+   "id": "e98"
+  },
+  {
+   "date": "2026-11-10",
+   "start": "15:00",
+   "end": "19:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "Back by 19:00 - early bed for Wed 05:00 shift",
+   "id": "e99"
+  },
+  {
+   "date": "2026-11-10",
+   "start": "20:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Wake 04:00; hard flip after two late shifts",
+   "id": "e100"
+  },
+  {
+   "date": "2026-11-11",
+   "start": "00:00",
+   "end": "04:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e101"
+  },
+  {
+   "date": "2026-11-11",
+   "start": "05:00",
+   "end": "15:30",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "Rest day",
+   "id": "e102"
+  },
+  {
+   "date": "2026-11-11",
+   "start": "18:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "Thu shift 03:30, wake 02:30",
+   "id": "e103"
+  },
+  {
+   "date": "2026-11-12",
+   "start": "00:00",
+   "end": "02:30",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e104"
+  },
+  {
+   "date": "2026-11-12",
+   "start": "03:30",
+   "end": "14:00",
+   "type": "chartright",
+   "label": "Chartright shift",
+   "notes": "",
+   "id": "e105"
+  },
+  {
+   "date": "2026-11-12",
+   "start": "14:30",
+   "end": "16:30",
+   "type": "workout",
+   "label": "Back & Biceps",
+   "notes": "2h",
+   "split": "Back & Biceps",
+   "id": "e106"
+  },
+  {
+   "date": "2026-11-12",
+   "start": "22:00",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e107"
+  },
+  {
+   "date": "2026-11-13",
+   "start": "00:00",
+   "end": "06:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e108"
+  },
+  {
+   "date": "2026-11-13",
+   "start": "09:30",
+   "end": "11:30",
+   "type": "workout",
+   "label": "Hamstrings & Quads",
+   "notes": "2h",
+   "split": "Hamstrings & Quads",
+   "id": "e109"
+  },
+  {
+   "date": "2026-11-13",
+   "start": "12:30",
+   "end": "21:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "",
+   "id": "e110"
+  },
+  {
+   "date": "2026-11-13",
+   "start": "22:30",
+   "end": "24:00",
+   "type": "sleep",
+   "label": "Sleep",
+   "notes": "",
+   "id": "e111"
   },
   {
    "date": "2026-10-18",
@@ -542,7 +1029,7 @@
    "label": "Weekly board meeting with the crew",
    "notes": "Recurring weekly (Sun) - overlaps Guelph open slot",
    "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e59"
+   "id": "e112"
   },
   {
    "date": "2026-10-25",
@@ -552,7 +1039,27 @@
    "label": "Weekly board meeting with the crew",
    "notes": "Recurring weekly (Sun) - overlaps Guelph open slot",
    "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e60"
+   "id": "e113"
+  },
+  {
+   "date": "2026-11-01",
+   "start": "18:00",
+   "end": "18:30",
+   "type": "event",
+   "label": "Weekly board meeting with the crew",
+   "notes": "Recurring weekly (Sun)",
+   "recurrence": "FREQ=WEEKLY;BYDAY=SU",
+   "id": "e114"
+  },
+  {
+   "date": "2026-11-08",
+   "start": "18:00",
+   "end": "18:30",
+   "type": "event",
+   "label": "Weekly board meeting with the crew",
+   "notes": "Recurring weekly (Sun)",
+   "recurrence": "FREQ=WEEKLY;BYDAY=SU",
+   "id": "e115"
   }
  ]
 }
