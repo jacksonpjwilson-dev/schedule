@@ -126,7 +126,7 @@ ev(30,"03:30","14:00","chartright","Chartright shift","Rest day")
 ev(30,"14:00","15:00","commute","Commute home")
 ev(30,"15:30","19:00","guelph","Open for Guelph","Back by 19:00 - early bed for Sat 05:00 shift")
 ev(30,"20:00","24:00","sleep","Sleep","Wake 04:00")
-# ---- Week 3: Sat Oct 31 - Fri Nov 6 (Payworks: no EA shifts Oct 24-31; Nov not readable yet) ----
+# ---- Week 3: Sat Oct 31 - Fri Nov 6 (Payworks read Oct 30: EA Nov 1 and Nov 2; split moved to Nov 3-6) ----
 N=lambda d:f"2026-11-{d:02d}"
 # Sat 31
 ev(31,"00:00","04:00","sleep","Sleep")
@@ -135,32 +135,34 @@ gym(31,"15:30","16:00","18:00","18:30",1,"Shoulders & Triceps")
 ev(31,"22:00","24:00","sleep","Sleep","Clocks fall back at 02:00 tonight (extra hour)")
 # Sun Nov 1
 ev(N(1),"00:00","06:00","sleep","Sleep")
-gym(N(1),"09:30","10:00","12:00","12:30",1,"Back & Biceps")
-ev(N(1),"13:00","17:30","guelph","Open for Guelph","Back before the 18:00 board meeting")
+ev(N(1),"09:00","17:00","ea","EA – YKF TRN BTW","Payworks (read Oct 30); EA day, no gym")
 ev(N(1),"22:30","24:00","sleep","Sleep")
 # Mon Nov 2
 ev(N(2),"00:00","06:30","sleep","Sleep")
-gym(N(2),"09:30","10:00","12:00","12:30",1,"Hamstrings & Quads")
-ev(N(2),"13:00","21:00","guelph","Open for Guelph")
+ev(N(2),"10:30","13:30","ea","EA – YKF TRN BTW","Payworks (read Oct 30)")
+ev(N(2),"14:00","17:00","ea","EA – YKF GH Lead","Payworks (read Oct 30); EA day, no gym")
+ev(N(2),"18:00","21:00","guelph","Open for Guelph")
 ev(N(2),"22:30","24:00","sleep","Sleep")
 # Tue Nov 3
 ev(N(3),"00:00","06:30","sleep","Sleep")
-gym(N(3),"09:00","09:30","11:30","12:00",1,"Arms & Calves")
+gym(N(3),"09:00","09:30","11:30","12:00",1,"Back & Biceps")
 ev(N(3),"12:30","19:00","guelph","Open for Guelph","Back by 19:00 - early bed for Wed 05:00 shift")
 ev(N(3),"20:00","24:00","sleep","Sleep","Wake 04:00")
 # Wed Nov 4 (rest)
 ev(N(4),"00:00","04:00","sleep","Sleep")
-ev(N(4),"05:00","15:30","chartright","Chartright shift","Rest day")
+ev(N(4),"05:00","15:30","chartright","Chartright shift")
+gym(N(4),"15:30","16:00","18:00","18:30",1,"Hamstrings & Quads")
 ev(N(4),"22:00","24:00","sleep","Sleep")
 # Thu Nov 5
 ev(N(5),"00:00","06:00","sleep","Sleep")
-gym(N(5),"09:00","09:30","11:30","12:00",1,"Chest & Shoulders")
+gym(N(5),"09:00","09:30","11:30","12:00",1,"Arms & Calves")
 ev(N(5),"12:30","17:00","guelph","Open for Guelph","Back by 17:00 - bed 18:30 for Fri 03:30 shift")
 ev(N(5),"18:30","24:00","sleep","Sleep","Fri shift 03:30, wake 02:30")
 # Fri Nov 6 (rest)
 ev(N(6),"00:00","02:30","sleep","Sleep")
-ev(N(6),"03:30","14:00","chartright","Chartright shift","Rest day")
-ev(N(6),"15:30","19:00","guelph","Open for Guelph","Back by 19:00 - early bed for Sat 05:00 shift")
+ev(N(6),"03:30","14:00","chartright","Chartright shift")
+gym(N(6),"14:00","14:30","16:30","17:00",1,"Chest & Shoulders")
+ev(N(6),"17:00","19:00","guelph","Open for Guelph","Back by 19:00 - early bed for Sat 05:00 shift")
 ev(N(6),"20:00","24:00","sleep","Sleep","Wake 04:00")
 # ---- Week 4: Sat Nov 7 - Fri Nov 13 (released Oct 23) ----
 # Sat Nov 7
