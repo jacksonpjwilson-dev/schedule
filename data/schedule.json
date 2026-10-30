@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-30T15:51:23+00:00",
+ "updated": "2026-10-30T16:23:13+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -664,11 +664,11 @@
   },
   {
    "date": "2026-11-03",
-   "start": "12:30",
+   "start": "13:30",
    "end": "19:00",
    "type": "guelph",
    "label": "Open for Guelph",
-   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift",
+   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift; shifted from 12:30-19:00 for Costco run",
    "id": "e73"
   },
   {
@@ -913,11 +913,11 @@
   },
   {
    "date": "2026-11-10",
-   "start": "12:30",
+   "start": "13:30",
    "end": "19:00",
    "type": "guelph",
    "label": "Open for Guelph",
-   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift",
+   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift; shifted from 12:30-19:00 for Costco run",
    "id": "e100"
   },
   {
@@ -1069,6 +1069,24 @@
    "notes": "Recurring weekly (Sun)",
    "recurrence": "FREQ=WEEKLY;BYDAY=SU",
    "id": "e116"
+  },
+  {
+   "date": "2026-11-03",
+   "start": "12:00",
+   "end": "13:00",
+   "type": "groceries",
+   "label": "Groceries: Costco",
+   "notes": "Weekly Costco run; 30-min drive each way",
+   "id": "e117"
+  },
+  {
+   "date": "2026-11-10",
+   "start": "12:00",
+   "end": "13:00",
+   "type": "groceries",
+   "label": "Groceries: Costco",
+   "notes": "Weekly Costco run; 30-min drive each way",
+   "id": "e118"
   }
  ]
 }

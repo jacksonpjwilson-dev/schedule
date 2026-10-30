@@ -1,5 +1,5 @@
 
-const TYPES=["chartright","ea","sleep","workout","guelph","event"],NAMES={chartright:"Chartright",ea:"EA",sleep:"Sleep",workout:"Workout",meal:"Meal",commute:"Commute",guelph:"Guelph",event:"Event"};
+const TYPES=["chartright","ea","sleep","workout","guelph","groceries","event"],NAMES={chartright:"Chartright",ea:"EA",sleep:"Sleep",workout:"Workout",meal:"Meal",commute:"Commute",guelph:"Guelph",groceries:"Groceries",event:"Event"};
 const K="schedule.overrides.v1",PX=40;let base=null,ov=JSON.parse(localStorage.getItem(K)||'{"edits":{},"deleted":[],"added":[]}'),view=innerWidth<700?"day":"week",cur=new Date(),editing=null;
 const pad=n=>String(n).padStart(2,"0"),iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()),mins=t=>{const[h,m]=t.split(":").map(Number);return h*60+m};
 const parse=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};

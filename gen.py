@@ -207,6 +207,49 @@ while _d<=_end:
     _iso=_d.isoformat(); _g=any(x["date"]==_iso and x["type"]=="guelph" and x["start"]<"18:30" and x["end"]>"18:00" for x in E)
     E.append({"date":_iso,"start":"18:00","end":"18:30","type":"event","label":"Weekly board meeting with the crew","notes":"Recurring weekly (Sun)"+(" - overlaps Guelph open slot" if _g else ""),"recurrence":"FREQ=WEEKLY;BYDAY=SU"})
     _d+=datetime.timedelta(7)
+# ---- Recurring: weekly Costco grocery run (Jackson, Oct 30), one per Sat-Fri week from Oct 31 ----
+# Day off only (no chartright/ea), preferring Tue, Mon, Sun, then any other day off. 60 min, 10:00-17:00 start
+# (Costco hours), >=30 min drive gap to every other event (sleep, gym, events). If only a Guelph block is in the
+# way, Guelph is trimmed to keep the 30-min gap (never gym, sleep or shifts); Guelph must keep >=2h.
+GROC_FROM=datetime.date(2026,10,31)
+def _m(t): h,m=map(int,t.split(":")); return h*60+m
+def _hm(m): return f"{m//60:02d}:{m%60:02d}"
+def _groc(day):
+    ds=day.isoformat(); L=[x for x in E if x["date"]==ds]
+    if any(x["type"] in("chartright","ea") for x in L): return None
+    best=None
+    for st in range(600,1021,30):
+        en=st+60; ok=True; trims=[]
+        for x in L:
+            a,b=_m(x["start"]),_m(x["end"])
+            if a<en+30 and b>st-30:
+                if x["type"]!="guelph": ok=False; break
+                # trim the Guelph block to whichever side keeps more of it
+                left=(a,min(b,st-30)); right=(max(a,en+30),b)
+                keep=max((left,right),key=lambda r:r[1]-r[0])
+                if keep[1]-keep[0]<120: ok=False; break
+                trims.append((x,keep))
+        if ok:
+            cost=sum(abs(_m(x["start"])-k[0])+abs(_m(x["end"])-k[1]) for x,k in trims)
+            if best is None or cost<best[0]: best=(cost,st,trims)
+            if cost==0: break
+    return best
+_d=GROC_FROM; _end=datetime.date.fromisoformat(max(x["date"] for x in E))
+while _d+datetime.timedelta(6)<=_end:
+    days=[_d+datetime.timedelta(i) for i in range(7)]
+    order=sorted(days,key=lambda d:({1:0,0:1,6:2}.get(d.weekday(),3),d))
+    pick=None
+    for d in order:
+        r=_groc(d)
+        if r and (pick is None or r[0]<pick[1][0]): pick=(d,r)
+        if pick and pick[1][0]==0: break
+    if pick:
+        d,(cost,st,trims)=pick
+        for x,(a,b) in trims:
+            old=f'{x["start"]}-{x["end"]}'; x["start"],x["end"]=_hm(a),_hm(b)
+            x["notes"]=((x.get("notes") or "")+f"; shifted from {old} for Costco run").strip("; ")
+        E.append({"date":d.isoformat(),"start":_hm(st),"end":_hm(st+60),"type":"groceries","label":"Groceries: Costco","notes":"Weekly Costco run; 30-min drive each way"})
+    _d+=datetime.timedelta(7)
 for i,x in enumerate(E):x["id"]=f"e{i+1}"
 json.dump({"timezone":"America/Toronto","updated":datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),"events":E},open("data/schedule.json","w"),indent=1,ensure_ascii=False)
 print(len(E),"events")
