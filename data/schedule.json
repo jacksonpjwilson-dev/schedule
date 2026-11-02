@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-10-30T16:23:13+00:00",
+ "updated": "2026-11-02T03:33:00+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -654,8 +654,8 @@
   },
   {
    "date": "2026-11-03",
-   "start": "09:30",
-   "end": "11:30",
+   "start": "12:30",
+   "end": "14:30",
    "type": "workout",
    "label": "Back & Biceps",
    "notes": "2h",
@@ -664,11 +664,11 @@
   },
   {
    "date": "2026-11-03",
-   "start": "13:30",
+   "start": "15:00",
    "end": "19:00",
    "type": "guelph",
    "label": "Open for Guelph",
-   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift; shifted from 12:30-19:00 for Costco run",
+   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift",
    "id": "e73"
   },
   {
@@ -839,21 +839,21 @@
   },
   {
    "date": "2026-11-08",
-   "start": "09:00",
-   "end": "11:00",
-   "type": "workout",
-   "label": "Quads & Calves",
-   "notes": "2h",
-   "split": "Quads & Calves",
+   "start": "11:00",
+   "end": "16:00",
+   "type": "guelph",
+   "label": "Open for Guelph",
+   "notes": "",
    "id": "e92"
   },
   {
    "date": "2026-11-08",
-   "start": "12:00",
-   "end": "17:30",
-   "type": "guelph",
-   "label": "Open for Guelph",
-   "notes": "Back by 17:30 for the 18:00 board meeting",
+   "start": "16:30",
+   "end": "18:30",
+   "type": "workout",
+   "label": "Quads & Calves",
+   "notes": "2h",
+   "split": "Quads & Calves",
    "id": "e93"
   },
   {
@@ -903,21 +903,21 @@
   },
   {
    "date": "2026-11-10",
-   "start": "09:30",
-   "end": "11:30",
+   "start": "12:00",
+   "end": "14:00",
    "type": "workout",
    "label": "Shoulders & Triceps",
-   "notes": "2h",
+   "notes": "2h; afternoon gym rule (was 09:30-11:30)",
    "split": "Shoulders & Triceps",
    "id": "e99"
   },
   {
    "date": "2026-11-10",
-   "start": "13:30",
+   "start": "14:30",
    "end": "19:00",
    "type": "guelph",
    "label": "Open for Guelph",
-   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift; shifted from 12:30-19:00 for Costco run",
+   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift; shifted from 12:30-19:00 for afternoon gym",
    "id": "e100"
   },
   {
@@ -1031,62 +1031,22 @@
    "id": "e112"
   },
   {
-   "date": "2026-10-18",
-   "start": "18:00",
-   "end": "18:30",
-   "type": "event",
-   "label": "Weekly board meeting with the crew",
-   "notes": "Recurring weekly (Sun) - overlaps Guelph open slot",
-   "recurrence": "FREQ=WEEKLY;BYDAY=SU",
+   "date": "2026-11-03",
+   "start": "10:30",
+   "end": "11:30",
+   "type": "groceries",
+   "label": "Groceries: Costco",
+   "notes": "Weekly Costco run; 30-min drive each way",
    "id": "e113"
   },
   {
-   "date": "2026-10-25",
-   "start": "18:00",
-   "end": "18:30",
-   "type": "event",
-   "label": "Weekly board meeting with the crew",
-   "notes": "Recurring weekly (Sun) - overlaps Guelph open slot",
-   "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e114"
-  },
-  {
-   "date": "2026-11-01",
-   "start": "18:00",
-   "end": "18:30",
-   "type": "event",
-   "label": "Weekly board meeting with the crew",
-   "notes": "Recurring weekly (Sun)",
-   "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e115"
-  },
-  {
-   "date": "2026-11-08",
-   "start": "18:00",
-   "end": "18:30",
-   "type": "event",
-   "label": "Weekly board meeting with the crew",
-   "notes": "Recurring weekly (Sun)",
-   "recurrence": "FREQ=WEEKLY;BYDAY=SU",
-   "id": "e116"
-  },
-  {
-   "date": "2026-11-03",
-   "start": "12:00",
-   "end": "13:00",
-   "type": "groceries",
-   "label": "Groceries: Costco",
-   "notes": "Weekly Costco run; 30-min drive each way",
-   "id": "e117"
-  },
-  {
    "date": "2026-11-10",
-   "start": "12:00",
-   "end": "13:00",
+   "start": "10:00",
+   "end": "11:00",
    "type": "groceries",
    "label": "Groceries: Costco",
    "notes": "Weekly Costco run; 30-min drive each way",
-   "id": "e118"
+   "id": "e114"
   }
  ]
 }

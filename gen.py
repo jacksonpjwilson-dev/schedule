@@ -148,8 +148,9 @@ ev(N(2),"18:00","21:00","guelph","Open for Guelph")
 ev(N(2),"22:30","24:00","sleep","Sleep")
 # Tue Nov 3 (day off)
 ev(N(3),"00:00","06:30","sleep","Sleep")
-gym(N(3),"09:00","09:30","11:30","12:00",1,"Back & Biceps")
-ev(N(3),"12:30","19:00","guelph","Open for Guelph","Back by 19:00 - bed 20:00 for Wed 05:00 shift")
+# Afternoon gym (Jackson, Nov 1): Costco 10:30-11:30 (pinned below), gym 12:30-14:30, Guelph 15:00-19:00
+gym(N(3),"12:00","12:30","14:30","15:00",1,"Back & Biceps")
+ev(N(3),"15:00","19:00","guelph","Open for Guelph","Back by 19:00 - bed 20:00 for Wed 05:00 shift")
 ev(N(3),"20:00","24:00","sleep","Sleep","Wake 04:00")
 # Wed Nov 4
 ev(N(4),"00:00","04:00","sleep","Sleep")
@@ -174,8 +175,8 @@ gym(N(7),"15:30","16:00","18:00","18:30",1,"Back & Hamstrings")
 ev(N(7),"22:00","24:00","sleep","Sleep")
 # Sun Nov 8 (day off)
 ev(N(8),"00:00","06:00","sleep","Sleep")
-gym(N(8),"08:30","09:00","11:00","11:30",1,"Quads & Calves")
-ev(N(8),"12:00","17:30","guelph","Open for Guelph","Back by 17:30 for the 18:00 board meeting")
+ev(N(8),"11:00","16:00","guelph","Open for Guelph")
+gym(N(8),"16:00","16:30","18:30","19:00",1,"Quads & Calves")
 ev(N(8),"22:30","24:00","sleep","Sleep")
 # Mon Nov 9 (day off, rest)
 ev(N(9),"00:00","06:30","sleep","Sleep")
@@ -200,13 +201,7 @@ ev(N(13),"00:00","04:00","sleep","Sleep")
 cr(N(13))
 gym(N(13),"15:30","16:00","18:00","18:30",1,"Hamstrings & Quads")
 ev(N(13),"20:00","24:00","sleep","Sleep","Wake 04:00 for Sat 05:00 shift")
-# ---- Recurring: Weekly board meeting, every Sunday 18:00-18:30 from 2026-10-18, through the planned range ----
-_ds=sorted({x["date"] for x in E}); _d=max(datetime.date(2026,10,18),datetime.date.fromisoformat(_ds[0])); _end=datetime.date.fromisoformat(_ds[-1])
-_d+=datetime.timedelta((6-_d.weekday())%7)
-while _d<=_end:
-    _iso=_d.isoformat(); _g=any(x["date"]==_iso and x["type"]=="guelph" and x["start"]<"18:30" and x["end"]>"18:00" for x in E)
-    E.append({"date":_iso,"start":"18:00","end":"18:30","type":"event","label":"Weekly board meeting with the crew","notes":"Recurring weekly (Sun)"+(" - overlaps Guelph open slot" if _g else ""),"recurrence":"FREQ=WEEKLY;BYDAY=SU"})
-    _d+=datetime.timedelta(7)
+# (Weekly Sunday board meeting removed Nov 1 - Jackson approved; no longer generated.)
 # ---- Recurring: weekly Costco grocery run (Jackson, Oct 30), one per Sat-Fri week from Oct 31 ----
 # Day off only (no chartright/ea), preferring Tue, Mon, Sun, then any other day off. 60 min, 10:00-17:00 start
 # (Costco hours), >=30 min drive gap to every other event (sleep, gym, events). If only a Guelph block is in the
@@ -214,11 +209,47 @@ while _d<=_end:
 GROC_FROM=datetime.date(2026,10,31)
 def _m(t): h,m=map(int,t.split(":")); return h*60+m
 def _hm(m): return f"{m//60:02d}:{m%60:02d}"
+# ---- Standing gym rule (Jackson, Nov 1): afternoon gym whenever it fits. ----
+# Shift days (chartright/ea): gym stays as written (right after the shift, e.g. 16:00-18:00 after 15:30).
+# Non-shift days: gym must start >=12:00 if it fits, otherwise >=10:00 (alarm is 60 min before the first
+# commitment and day-off wake is 09:00, so gym never forces an earlier wake). 30-min gap to every other
+# event; a Guelph block may be shifted/trimmed (keeps >=2h); sleep/shifts/events are never moved.
+GYM_RULE_FROM="2026-11-02"
+def _gym_rule():
+    for g in [x for x in E if x["type"]=="workout"]:
+        ds=g["date"]
+        if ds<GYM_RULE_FROM: continue
+        L=[x for x in E if x["date"]==ds and x is not g and x["type"] not in("commute","meal")]
+        if any(x["type"] in("chartright","ea") for x in L) or _m(g["start"])>=720: continue
+        dur=_m(g["end"])-_m(g["start"]); best=None
+        for lo in (720,600):
+            for st in range(lo,1440-dur+1,30):
+                en=st+dur; ok=True; trims=[]
+                for x in L:
+                    a,b=_m(x["start"]),_m(x["end"])
+                    if a<en+30 and b>st-30:
+                        if x["type"]!="guelph": ok=False; break
+                        left=(a,min(b,st-30)); right=(max(a,en+30),b)
+                        keep=max((left,right),key=lambda r:r[1]-r[0])
+                        if keep[1]-keep[0]<120: ok=False; break
+                        trims.append((x,keep))
+                if ok:
+                    cost=sum(abs(_m(x["start"])-k[0])+abs(_m(x["end"])-k[1]) for x,k in trims)
+                    if best is None or cost<best[0]: best=(cost,st,trims)
+            if best: break
+        if not best: continue
+        cost,st,trims=best; old=f'{g["start"]}-{g["end"]}'
+        for x,(a,b) in trims:
+            o=f'{x["start"]}-{x["end"]}'; x["start"],x["end"]=_hm(a),_hm(b)
+            x["notes"]=((x.get("notes") or "")+f"; shifted from {o} for afternoon gym").strip("; ")
+        g["start"],g["end"]=_hm(st),_hm(st+dur); g["notes"]=((g.get("notes") or "")+f"; afternoon gym rule (was {old})").strip("; ")
+_gym_rule()
+GROC_PIN={"2026-11-03":630}  # Jackson/G.I.L.E.S. Nov 1: Costco 10:30 before 12:30 gym
 def _groc(day):
-    ds=day.isoformat(); L=[x for x in E if x["date"]==ds]
+    ds=day.isoformat(); L=[x for x in E if x["date"]==ds and x["type"] not in("commute","meal")]
     if any(x["type"] in("chartright","ea") for x in L): return None
     best=None
-    for st in range(600,1021,30):
+    for st in ([GROC_PIN[ds]] if ds in GROC_PIN else range(600,1021,30)):
         en=st+60; ok=True; trims=[]
         for x in L:
             a,b=_m(x["start"]),_m(x["end"])
