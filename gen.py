@@ -148,9 +148,12 @@ ev(N(2),"18:00","21:00","guelph","Open for Guelph")
 ev(N(2),"22:30","24:00","sleep","Sleep")
 # Tue Nov 3 (day off)
 ev(N(3),"00:00","06:30","sleep","Sleep")
-# Afternoon gym (Jackson, Nov 1): Costco 10:30-11:30 (pinned below), gym 12:30-14:30, Guelph 15:00-19:00
-gym(N(3),"12:00","12:30","14:30","15:00",1,"Back & Biceps")
-ev(N(3),"15:00","19:00","guelph","Open for Guelph","Back by 19:00 - bed 20:00 for Wed 05:00 shift")
+# Jackson (Nov 2, 10:05, via G.I.L.E.S. edit in Google): gym 12:00-14:00, Costco 14:30-15:30 (pinned below),
+# Guelph 15:00-19:00 tentative. Overlap Costco/Guelph is intentional (soft suggestion) - PINNED: gym rule,
+# Costco placement and clash checks must not move these.
+gym(N(3),"11:30","12:00","14:00","14:30",1,"Back & Biceps")
+ev(N(3),"15:00","19:00","guelph","Open for Guelph (tentative)","Soft suggested time only, not confirmed. Other events may overlap.\nBack by 19:00 - bed 20:00 for Wed 05:00 shift")
+PINNED_DATES={N(3)}
 ev(N(3),"20:00","24:00","sleep","Sleep","Wake 04:00")
 # Wed Nov 4
 ev(N(4),"00:00","04:00","sleep","Sleep")
@@ -218,7 +221,7 @@ GYM_RULE_FROM="2026-11-02"
 def _gym_rule():
     for g in [x for x in E if x["type"]=="workout"]:
         ds=g["date"]
-        if ds<GYM_RULE_FROM: continue
+        if ds<GYM_RULE_FROM or ds in PINNED_DATES: continue
         L=[x for x in E if x["date"]==ds and x is not g and x["type"] not in("commute","meal")]
         if any(x["type"] in("chartright","ea") for x in L) or _m(g["start"])>=720: continue
         dur=_m(g["end"])-_m(g["start"]); best=None
@@ -244,10 +247,11 @@ def _gym_rule():
             x["notes"]=((x.get("notes") or "")+f"; shifted from {o} for afternoon gym").strip("; ")
         g["start"],g["end"]=_hm(st),_hm(st+dur); g["notes"]=((g.get("notes") or "")+f"; afternoon gym rule (was {old})").strip("; ")
 _gym_rule()
-GROC_PIN={"2026-11-03":630}  # Jackson/G.I.L.E.S. Nov 1: Costco 10:30 before 12:30 gym
+GROC_PIN={"2026-11-03":870}  # Jackson Nov 2 (via G.I.L.E.S.): Costco 14:30-15:30; pinned = placed as-is, no gap checks/trims
 def _groc(day):
     ds=day.isoformat(); L=[x for x in E if x["date"]==ds and x["type"] not in("commute","meal")]
     if any(x["type"] in("chartright","ea") for x in L): return None
+    if ds in GROC_PIN: return (0,GROC_PIN[ds],[])
     best=None
     for st in ([GROC_PIN[ds]] if ds in GROC_PIN else range(600,1021,30)):
         en=st+60; ok=True; trims=[]

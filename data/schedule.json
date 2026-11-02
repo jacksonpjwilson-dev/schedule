@@ -1,6 +1,6 @@
 {
  "timezone": "America/Toronto",
- "updated": "2026-11-02T03:33:00+00:00",
+ "updated": "2026-11-02T15:07:06+00:00",
  "events": [
   {
    "date": "2026-10-17",
@@ -654,8 +654,8 @@
   },
   {
    "date": "2026-11-03",
-   "start": "12:30",
-   "end": "14:30",
+   "start": "12:00",
+   "end": "14:00",
    "type": "workout",
    "label": "Back & Biceps",
    "notes": "2h",
@@ -667,8 +667,8 @@
    "start": "15:00",
    "end": "19:00",
    "type": "guelph",
-   "label": "Open for Guelph",
-   "notes": "Back by 19:00 - bed 20:00 for Wed 05:00 shift",
+   "label": "Open for Guelph (tentative)",
+   "notes": "Soft suggested time only, not confirmed. Other events may overlap.\nBack by 19:00 - bed 20:00 for Wed 05:00 shift",
    "id": "e73"
   },
   {
@@ -1032,8 +1032,8 @@
   },
   {
    "date": "2026-11-03",
-   "start": "10:30",
-   "end": "11:30",
+   "start": "14:30",
+   "end": "15:30",
    "type": "groceries",
    "label": "Groceries: Costco",
    "notes": "Weekly Costco run; 30-min drive each way",
